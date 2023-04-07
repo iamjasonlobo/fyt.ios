@@ -16,7 +16,7 @@ The fitness Fun is where can keep you fit and healthy. Come here to get fit.
 - **Story:** users can see their health data daily, and upload pictures when they are doing exercises.
 - **Market:** Any individual could choose to use this app, and to keep it a safe environment.
 - **Habit:** This app could be used everyday.
-- **Scope:** 
+- **Scope:** Two weeks.
 
 ## Product Spec
 ### 1. User Stories (Required and Optional)
