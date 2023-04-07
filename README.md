@@ -13,7 +13,7 @@ The fitness Fun is where can keep you fit and healthy. Come here to get fit.
 ### App Evaluation
 - **Category:** Fitness
 - **Mobile:** This app would be primarily developed for mobile.
-- **Story:** Analyzes users can see the data daily, and upload pictures when they are doing exercise.
+- **Story:** users can see their health data daily, and upload pictures when they are doing exercises.
 - **Market:** Any individual could choose to use this app, and to keep it a safe environment.
 - **Habit:** This app could be used everyday.
 - **Scope:** 
@@ -23,9 +23,9 @@ The fitness Fun is where can keep you fit and healthy. Come here to get fit.
 
 **Required Must-have Stories**
 
-* Tableview to show all the activities users do.
-* Show charts for workout distance.
-* upload photoes when they are doing exercise.
+* Tableview to show a summary of different health aspects for example, step count, calories, distance covered, resting heartbeat,type of workout,water intake.
+* charts to show averages per day/month of each  health category. 
+* upload photos when they are doing exercise.
 
 **Optional Nice-to-have Stories**
 
@@ -38,22 +38,22 @@ The fitness Fun is where can keep you fit and healthy. Come here to get fit.
 * Register - User signs up or logs into their account
 * Summary Screen - show the activities the user have
 * Show photos Screen -show the photoes after uploading their photoes.
-* photo Selection Screen.
-   * users can upload the pictures of exercise. And then interract with others.
+* Photo Selection Screen.
+   * users can upload the pictures of exercise and then interract with others.
+
+* users can log out of the app
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
 * Summary
-* Charts
-* Photo selection
-* Photo show
+* Sharing
 
 **Flow Navigation** (Screen to Screen)
-* Forced Log-in -> Account creation if no log in is available
-* Tab charts - show charts
-* Tab Photo -> upload photoes.
+* Sign up -> Log-in.This is where a user creates an account and signs in.
+* Table view summary -> show charts/averages
+* Sharing -> upload photos.
 
 
 
