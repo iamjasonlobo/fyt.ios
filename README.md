@@ -1,4 +1,4 @@
-#fyt. - A fitness lifestyle app
+# fyt. - A fitness lifestyle app
 
 ## Table of Contents
 1. [Overview](#Overview)
