@@ -18,13 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // TODO: Pt 1 - Initialize Parse SDK
         //https://github.com/parse-community/Parse-Swift/blob/main/ParseSwift.playground/Sources/Common.swift
-        ParseSwift.initialize(applicationId: "enSQfbNAE5GsMvaEBMCNXW0LR8XPx58Cwk5X0zoS",
-                              clientKey: "wpi1TO37bxwojYKMOsr5WgWDrm2jD18KjUCwGqKk",
+        ParseSwift.initialize(applicationId: "UDyxQBMJ8wcE2hhtuacFruWQwXydeArVVfXsUICx",
+                              clientKey: "K6ylLZal5eFZsdjLrtmiMrRj21XC76QO6z2jbpg9",
                               serverURL: URL(string: "https://parseapi.back4app.com")!)
-
-
-        // TODO: Pt 1: - Instantiate and save a test parse object to your server
-        // https://github.com/parse-community/Parse-Swift/blob/3d4bb13acd7496a49b259e541928ad493219d363/ParseSwift.playground/Pages/1%20-%20Your%20first%20Object.xcplaygroundpage/Contents.swift#L121
 
 
         return true
@@ -44,8 +40,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 }
-
-// TODO: Pt 1 - Create Test Parse Object
-// https://github.com/parse-community/Parse-Swift/blob/3d4bb13acd7496a49b259e541928ad493219d363/ParseSwift.playground/Pages/1%20-%20Your%20first%20Object.xcplaygroundpage/Contents.swift#L33
 
 

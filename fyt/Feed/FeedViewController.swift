@@ -14,7 +14,8 @@ import ParseSwift
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    
+    
     private var posts = [Post]() {
         didSet {
             // Reload table view data any time the posts variable gets updated.
@@ -28,6 +29,19 @@ class FeedViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
+        
+        // Adding fyt. logo to the navbar
+        let logoView = UIView(frame: CGRect(x: 0, y: 0, width: 90, height: 45))
+        // Create an image view with the image you want to display
+        let logoImageView = UIImageView(image: UIImage(named: "fyt_logo"))
+        logoImageView.contentMode = .scaleAspectFit
+        // Set the frame of the image view to fit inside the custom view
+        logoImageView.frame = CGRect(x: 0, y: 0, width: logoView.frame.width, height: logoView.frame.height)
+        // Add the image view to the custom view
+        logoView.addSubview(logoImageView)
+        // Set the custom view as the title view of the navigation bar
+        navigationItem.titleView = logoView
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

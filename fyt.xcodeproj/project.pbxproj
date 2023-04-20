@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E9051A29ED1C770065B295 /* Avenir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051729ED1C770065B295 /* Avenir.ttf */; };
+		05E9051B29ED1C770065B295 /* AvenirNxt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */; };
+		05E9051C29ED1C770065B295 /* AvenirNxt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051929ED1C770065B295 /* AvenirNxt.otf */; };
+		05E9051E29ED1DFB0065B295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051D29ED1DFB0065B295 /* Main.storyboard */; };
 		CB13E51F2913A16C008F45BB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB13E51E2913A16C008F45BB /* PostCell.swift */; };
 		CB13E5212913B10B008F45BB /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB13E5202913B10B008F45BB /* DateFormatter+Extensions.swift */; };
 		CB69974E2910F705007EDA6B /* Filmotype-Jade.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB69974C2910F704007EDA6B /* Filmotype-Jade.otf */; };
@@ -15,7 +19,6 @@
 		CB73D395290E3B4A00C12538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73D394290E3B4A00C12538 /* AppDelegate.swift */; };
 		CB73D397290E3B4A00C12538 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73D396290E3B4A00C12538 /* SceneDelegate.swift */; };
 		CB73D399290E3B4A00C12538 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73D398290E3B4A00C12538 /* LoginViewController.swift */; };
-		CB73D39C290E3B4A00C12538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB73D39A290E3B4A00C12538 /* Main.storyboard */; };
 		CB73D39E290E3B4C00C12538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB73D39D290E3B4C00C12538 /* Assets.xcassets */; };
 		CB73D3A1290E3B4C00C12538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB73D39F290E3B4C00C12538 /* LaunchScreen.storyboard */; };
 		CB7896EC2935A3D500635932 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB7896EB2935A3D500635932 /* ParseSwift */; };
@@ -26,16 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E9051729ED1C770065B295 /* Avenir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttf; sourceTree = "<group>"; };
+		05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNxt-Bold.otf"; sourceTree = "<group>"; };
+		05E9051929ED1C770065B295 /* AvenirNxt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirNxt.otf; sourceTree = "<group>"; };
+		05E9051D29ED1DFB0065B295 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CB13E51E2913A16C008F45BB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CB13E5202913B10B008F45BB /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		CB69974C2910F704007EDA6B /* Filmotype-Jade.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Filmotype-Jade.otf"; sourceTree = "<group>"; };
 		CB6997502911044D007EDA6B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CB6997522911354B007EDA6B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		CB73D391290E3B4A00C12538 /* almost-real.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "almost-real.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB73D391290E3B4A00C12538 /* fyt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fyt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB73D394290E3B4A00C12538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB73D396290E3B4A00C12538 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB73D398290E3B4A00C12538 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CB73D39B290E3B4A00C12538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB73D39D290E3B4C00C12538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB73D3A0290E3B4C00C12538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB73D3A2290E3B4C00C12538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +100,9 @@
 		CB6997472910E7E3007EDA6B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				05E9051729ED1C770065B295 /* Avenir.ttf */,
+				05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */,
+				05E9051929ED1C770065B295 /* AvenirNxt.otf */,
 				CB69974C2910F704007EDA6B /* Filmotype-Jade.otf */,
 			);
 			path = Fonts;
@@ -102,7 +111,7 @@
 		CB73D388290E3B4A00C12538 = {
 			isa = PBXGroup;
 			children = (
-				CB73D393290E3B4A00C12538 /* almost-real */,
+				CB73D393290E3B4A00C12538 /* fyt */,
 				CB73D392290E3B4A00C12538 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,14 +119,15 @@
 		CB73D392290E3B4A00C12538 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB73D391290E3B4A00C12538 /* almost-real.app */,
+				CB73D391290E3B4A00C12538 /* fyt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB73D393290E3B4A00C12538 /* almost-real */ = {
+		CB73D393290E3B4A00C12538 /* fyt */ = {
 			isa = PBXGroup;
 			children = (
+				05E9051D29ED1DFB0065B295 /* Main.storyboard */,
 				CB73D394290E3B4A00C12538 /* AppDelegate.swift */,
 				CB73D396290E3B4A00C12538 /* SceneDelegate.swift */,
 				CB7896ED2935DB4100635932 /* Models */,
@@ -125,13 +135,12 @@
 				CB13E51D2913A121008F45BB /* Feed */,
 				CB13E51C2913A100008F45BB /* Post */,
 				CB13E5222913B119008F45BB /* Extensions */,
-				CB73D39A290E3B4A00C12538 /* Main.storyboard */,
 				CB73D39D290E3B4C00C12538 /* Assets.xcassets */,
 				CB73D39F290E3B4C00C12538 /* LaunchScreen.storyboard */,
 				CB73D3A2290E3B4C00C12538 /* Info.plist */,
 				CB6997472910E7E3007EDA6B /* Fonts */,
 			);
-			path = "almost-real";
+			path = fyt;
 			sourceTree = "<group>";
 		};
 		CB7896ED2935DB4100635932 /* Models */ = {
@@ -146,9 +155,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB73D390290E3B4A00C12538 /* almost-real */ = {
+		CB73D390290E3B4A00C12538 /* fyt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB73D3A5290E3B4C00C12538 /* Build configuration list for PBXNativeTarget "almost-real" */;
+			buildConfigurationList = CB73D3A5290E3B4C00C12538 /* Build configuration list for PBXNativeTarget "fyt" */;
 			buildPhases = (
 				CB73D38D290E3B4A00C12538 /* Sources */,
 				CB73D38E290E3B4A00C12538 /* Frameworks */,
@@ -158,13 +167,13 @@
 			);
 			dependencies = (
 			);
-			name = "almost-real";
+			name = fyt;
 			packageProductDependencies = (
 				CB7896EB2935A3D500635932 /* ParseSwift */,
 				CB7896F329361CC600635932 /* AlamofireImage */,
 			);
 			productName = "lab-insta-parse";
-			productReference = CB73D391290E3B4A00C12538 /* almost-real.app */;
+			productReference = CB73D391290E3B4A00C12538 /* fyt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CB73D38C290E3B4A00C12538 /* Build configuration list for PBXProject "almost-real" */;
+			buildConfigurationList = CB73D38C290E3B4A00C12538 /* Build configuration list for PBXProject "fyt" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -199,7 +208,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB73D390290E3B4A00C12538 /* almost-real */,
+				CB73D390290E3B4A00C12538 /* fyt */,
 			);
 		};
 /* End PBXProject section */
@@ -209,10 +218,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E9051E29ED1DFB0065B295 /* Main.storyboard in Resources */,
+				05E9051C29ED1C770065B295 /* AvenirNxt.otf in Resources */,
 				CB73D3A1290E3B4C00C12538 /* LaunchScreen.storyboard in Resources */,
 				CB73D39E290E3B4C00C12538 /* Assets.xcassets in Resources */,
 				CB69974E2910F705007EDA6B /* Filmotype-Jade.otf in Resources */,
-				CB73D39C290E3B4A00C12538 /* Main.storyboard in Resources */,
+				05E9051B29ED1C770065B295 /* AvenirNxt-Bold.otf in Resources */,
+				05E9051A29ED1C770065B295 /* Avenir.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,14 +251,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB73D39A290E3B4A00C12538 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB73D39B290E3B4A00C12538 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB73D39F290E3B4C00C12538 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -381,7 +385,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7Q2LP8J9D;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "almost-real/Info.plist";
+				INFOPLIST_FILE = fyt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = fyt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -392,7 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iamjasonlobo.almost-real";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamjasonlobo.fyt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -409,7 +414,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7Q2LP8J9D;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "almost-real/Info.plist";
+				INFOPLIST_FILE = fyt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = fyt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -420,7 +426,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iamjasonlobo.almost-real";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamjasonlobo.fyt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -431,7 +437,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB73D38C290E3B4A00C12538 /* Build configuration list for PBXProject "almost-real" */ = {
+		CB73D38C290E3B4A00C12538 /* Build configuration list for PBXProject "fyt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB73D3A3290E3B4C00C12538 /* Debug */,
@@ -440,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB73D3A5290E3B4C00C12538 /* Build configuration list for PBXNativeTarget "almost-real" */ = {
+		CB73D3A5290E3B4C00C12538 /* Build configuration list for PBXNativeTarget "fyt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB73D3A6290E3B4C00C12538 /* Debug */,

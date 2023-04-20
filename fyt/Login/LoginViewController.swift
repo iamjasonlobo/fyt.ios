@@ -14,9 +14,35 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var stackView: UIStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // UI customizations to stackview
+            // Making edges of stackview rounded
+        stackView.layer.cornerRadius = 30
+        stackView.layer.masksToBounds = true
+            // Addring Stroke to give depth
+                // Create a new layer for the stroke
+        let strokeLayer = CALayer()
+        strokeLayer.borderColor = UIColor(named: "fytStrokeBlack")?.cgColor
+        strokeLayer.borderWidth = 1
+        strokeLayer.frame = stackView.bounds
+                // Add the stroke layer to the stack view's layer
+        stackView.layer.addSublayer(strokeLayer)
+        
+        // Customize placeholder color
+        // Get the named color asset
+        guard let fytFontGray = UIColor(named: "fytFontGray") else {
+            fatalError("Couldn't get named color asset")
+        }
+        // Set the placeholder text color for usernameField
+        let placeholderAttributes = [
+            NSAttributedString.Key.foregroundColor: fytFontGray
+        ]
+        usernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: placeholderAttributes)
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: placeholderAttributes)
     }
     
     @IBAction func onLoginTapped(_ sender: Any) {
