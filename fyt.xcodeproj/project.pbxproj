@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0538B61329F3590700415AFE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538B61229F3590700415AFE /* ProfileViewController.swift */; };
 		05E9051A29ED1C770065B295 /* Avenir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051729ED1C770065B295 /* Avenir.ttf */; };
 		05E9051B29ED1C770065B295 /* AvenirNxt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */; };
 		05E9051C29ED1C770065B295 /* AvenirNxt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051929ED1C770065B295 /* AvenirNxt.otf */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0538B61229F3590700415AFE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ProfileViewController.swift; sourceTree = "<group>"; };
 		05E9051729ED1C770065B295 /* Avenir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttf; sourceTree = "<group>"; };
 		05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNxt-Bold.otf"; sourceTree = "<group>"; };
 		05E9051929ED1C770065B295 /* AvenirNxt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirNxt.otf; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CB6997522911354B007EDA6B /* FeedViewController.swift */,
+				0538B61229F3590700415AFE /* ProfileViewController.swift */,
 				CB13E51E2913A16C008F45BB /* PostCell.swift */,
 			);
 			path = Feed;
@@ -241,6 +244,7 @@
 				CB73D395290E3B4A00C12538 /* AppDelegate.swift in Sources */,
 				CB6997532911354B007EDA6B /* FeedViewController.swift in Sources */,
 				CB7896EF2935DC4E00635932 /* User.swift in Sources */,
+				0538B61329F3590700415AFE /* ProfileViewController.swift in Sources */,
 				CB6997512911044D007EDA6B /* SignUpViewController.swift in Sources */,
 				CB13E5212913B10B008F45BB /* DateFormatter+Extensions.swift in Sources */,
 				CB73D397290E3B4A00C12538 /* SceneDelegate.swift in Sources */,
