@@ -13,6 +13,7 @@ import ParseSwift
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var stackView: UIStackView!
@@ -54,7 +55,9 @@ class SignUpViewController: UIViewController {
         guard let username = usernameField.text,
               let email = emailField.text,
               let password = passwordField.text,
+              let name = nameField.text,
               !username.isEmpty,
+              !name.isEmpty,
               !email.isEmpty,
               !password.isEmpty else {
 
@@ -67,6 +70,7 @@ class SignUpViewController: UIViewController {
         newUser.username = username
         newUser.email = email
         newUser.password = password
+        newUser.fullName = name
 
         newUser.signup { [weak self] result in
 

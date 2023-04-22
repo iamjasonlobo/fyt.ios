@@ -182,13 +182,13 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HrU-Ph-oLa">
-                                <rect key="frame" x="30" y="184.66666666666666" width="330" height="410.66666666666674"/>
+                                <rect key="frame" x="30" y="184.66666666666666" width="330" height="470.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="P6U-eo-3It">
-                                        <rect key="frame" x="30" y="40" width="270" height="320.66666666666669"/>
+                                        <rect key="frame" x="30" y="40" width="270" height="380.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="y7P-nd-SQe">
-                                                <rect key="frame" x="0.0" y="0.0" width="270" height="244.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="304.66666666666669"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EfZ-Bc-dDr">
                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="53.666666666666664"/>
@@ -208,7 +208,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-gI-cMz">
-                                                        <rect key="frame" x="0.0" y="74.666666666666657" width="270" height="170"/>
+                                                        <rect key="frame" x="0.0" y="74.666666666666657" width="270" height="229.99999999999997"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5pD-xS-TXs">
                                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
@@ -221,8 +221,19 @@
                                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRk-ag-gPv">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WF8-WQ-VzH">
                                                                 <rect key="frame" x="0.0" y="60" width="270" height="50"/>
+                                                                <color key="backgroundColor" name="fytBackBlack"/>
+                                                                <color key="tintColor" red="0.0" green="0.7843137255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="6oO-uo-fmi"/>
+                                                                </constraints>
+                                                                <color key="textColor" name="fytWhite"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRk-ag-gPv">
+                                                                <rect key="frame" x="0.0" y="120" width="270" height="50"/>
                                                                 <color key="backgroundColor" name="fytBackBlack"/>
                                                                 <color key="tintColor" red="0.0" green="0.7843137255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
@@ -233,7 +244,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ro2-Cf-yEI">
-                                                                <rect key="frame" x="0.0" y="120" width="270" height="50"/>
+                                                                <rect key="frame" x="0.0" y="180" width="270" height="50"/>
                                                                 <color key="backgroundColor" name="fytBackBlack"/>
                                                                 <color key="tintColor" red="0.0" green="0.7843137255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
@@ -248,7 +259,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Sa3-8g-q6M">
-                                                <rect key="frame" x="0.0" y="272.66666666666663" width="270" height="48"/>
+                                                <rect key="frame" x="0.0" y="332.66666666666674" width="270" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6l-eO-4ed">
                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="48"/>
@@ -289,6 +300,7 @@
                     <navigationItem key="navigationItem" id="7Of-Aa-Qfu"/>
                     <connections>
                         <outlet property="emailField" destination="ZRk-ag-gPv" id="eeW-SS-a2R"/>
+                        <outlet property="nameField" destination="WF8-WQ-VzH" id="pyO-he-1NV"/>
                         <outlet property="passwordField" destination="ro2-Cf-yEI" id="reD-Oz-O1I"/>
                         <outlet property="stackView" destination="HrU-Ph-oLa" id="jSp-5l-qkf"/>
                         <outlet property="usernameField" destination="5pD-xS-TXs" id="8F9-MB-fU1"/>
@@ -446,8 +458,8 @@
                     <navigationItem key="navigationItem" title="fyt." id="LaS-Bo-eDE">
                         <barButtonItem key="backBarButtonItem" title=" " id="3DH-ur-kyc"/>
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="Tgq-Yz-eLC">
-                            <imageReference key="image" image="minus.circle" catalog="system" symbolScale="medium"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageReference key="image" image="minus.diamond" catalog="system" symbolScale="small"/>
+                            <color key="tintColor" name="fytStrokeBlack"/>
                             <connections>
                                 <action selector="onLogOutTapped:" destination="D49-nA-hPQ" id="PF3-L7-hru"/>
                             </connections>
@@ -671,7 +683,7 @@
         <image name="bolt.circle.fill" catalog="system" width="128" height="123"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="fyt_logo" width="200" height="100"/>
-        <image name="minus.circle" catalog="system" width="128" height="123"/>
+        <image name="minus.diamond" catalog="system" width="128" height="124"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
@@ -690,6 +702,9 @@
         </namedColor>
         <namedColor name="fytStackBlack">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="fytStrokeBlack">
+            <color red="0.019607843137254902" green="0.019607843137254902" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="fytWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
