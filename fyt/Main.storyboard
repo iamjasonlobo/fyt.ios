@@ -463,32 +463,17 @@
             </objects>
             <point key="canvasLocation" x="1920" y="711.61137440758296"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="jUv-Kw-ohb">
             <objects>
-                <viewController id="W9U-om-aHm" sceneMemberID="viewController">
+                <viewController id="W9U-om-aHm" customClass="ProfileViewController" customModule="fyt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rew-I7-8ZA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BUV-Tu-SH9"/>
                         <color key="backgroundColor" name="fytBackBlack"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="VJq-mT-fhF">
-                        <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color name="fytBackBlack"/>
-                                <color name="fytWhite"/>
-                                <color name="fytWhite"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                        <imageReference key="selectedImage" image="person.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color name="fytBackBlack"/>
-                                <color name="AccentColor"/>
-                                <color name="AccentColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="mGc-7X-KQd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0On-Am-OnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -628,6 +613,7 @@
                 <tabBarController title="TabBarView" automaticallyAdjustsScrollViewInsets="NO" id="hJh-EI-SiH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Uct-IS-vhB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="fytStackBlack"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -639,12 +625,46 @@
                     </tabBar>
                     <connections>
                         <segue destination="DAh-Kx-zT3" kind="relationship" relationship="viewControllers" id="u7S-H1-dHN"/>
-                        <segue destination="W9U-om-aHm" kind="relationship" relationship="viewControllers" id="KQ5-wB-kMb"/>
+                        <segue destination="YgG-4d-DLG" kind="relationship" relationship="viewControllers" id="Kz2-qN-BxB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bJ-dr-AJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="253.84615384615384" y="711.61137440758296"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MMX-ta-JKM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YgG-4d-DLG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="VJq-mT-fhF">
+                        <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color name="fytBackBlack"/>
+                                <color name="fytWhite"/>
+                                <color name="fytWhite"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="person.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color name="fytBackBlack"/>
+                                <color name="AccentColor"/>
+                                <color name="AccentColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pYa-Mz-Yde">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W9U-om-aHm" kind="relationship" relationship="rootViewController" id="yat-OK-VmC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65M-Ma-9Es" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="1450"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
