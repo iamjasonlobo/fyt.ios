@@ -42,6 +42,7 @@ class FeedViewController: UIViewController {
         // Set the custom view as the title view of the navigation bar
         navigationItem.titleView = logoView
         
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
