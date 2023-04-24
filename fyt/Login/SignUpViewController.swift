@@ -46,6 +46,7 @@ class SignUpViewController: UIViewController {
         usernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: placeholderAttributes)
         emailField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: placeholderAttributes)
         passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: placeholderAttributes)
+        nameField.attributedPlaceholder = NSAttributedString(string: "Full Name", attributes: placeholderAttributes)
 
     }
 

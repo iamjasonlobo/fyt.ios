@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0538B61729F35AC600415AFE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538B61629F35AC600415AFE /* ProfileViewController.swift */; };
+		058997BA29F66A1E008E65E7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058997B929F66A1E008E65E7 /* HealthKit.framework */; };
+		058997BD29F712AA008E65E7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058997BC29F712AA008E65E7 /* Charts.framework */; };
 		05E9051A29ED1C770065B295 /* Avenir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051729ED1C770065B295 /* Avenir.ttf */; };
 		05E9051B29ED1C770065B295 /* AvenirNxt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */; };
 		05E9051C29ED1C770065B295 /* AvenirNxt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051929ED1C770065B295 /* AvenirNxt.otf */; };
@@ -31,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		0538B61629F35AC600415AFE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		058997B929F66A1E008E65E7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		058997BB29F6DC22008E65E7 /* fyt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fyt.entitlements; sourceTree = "<group>"; };
+		058997BC29F712AA008E65E7 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = System/Library/Frameworks/Charts.framework; sourceTree = SDKROOT; };
 		05E9051729ED1C770065B295 /* Avenir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttf; sourceTree = "<group>"; };
 		05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNxt-Bold.otf"; sourceTree = "<group>"; };
 		05E9051929ED1C770065B295 /* AvenirNxt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirNxt.otf; sourceTree = "<group>"; };
@@ -57,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058997BA29F66A1E008E65E7 /* HealthKit.framework in Frameworks */,
+				058997BD29F712AA008E65E7 /* Charts.framework in Frameworks */,
 				CB7896EC2935A3D500635932 /* ParseSwift in Frameworks */,
 				CB7896F429361CC600635932 /* AlamofireImage in Frameworks */,
 			);
@@ -71,6 +78,15 @@
 				0538B61629F35AC600415AFE /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		058997B829F66A1E008E65E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				058997BC29F712AA008E65E7 /* Charts.framework */,
+				058997B929F66A1E008E65E7 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CB13E51B2913A0E7008F45BB /* Login */ = {
@@ -123,6 +139,7 @@
 			children = (
 				CB73D393290E3B4A00C12538 /* fyt */,
 				CB73D392290E3B4A00C12538 /* Products */,
+				058997B829F66A1E008E65E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +154,7 @@
 		CB73D393290E3B4A00C12538 /* fyt */ = {
 			isa = PBXGroup;
 			children = (
+				058997BB29F6DC22008E65E7 /* fyt.entitlements */,
 				05E9051D29ED1DFB0065B295 /* Main.storyboard */,
 				CB73D394290E3B4A00C12538 /* AppDelegate.swift */,
 				CB73D396290E3B4A00C12538 /* SceneDelegate.swift */,
@@ -393,17 +411,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fyt/fyt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7Q2LP8J9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = fyt/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = fyt;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Requesting camera access to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,17 +441,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fyt/fyt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7Q2LP8J9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = fyt/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = fyt;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Requesting camera access to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
