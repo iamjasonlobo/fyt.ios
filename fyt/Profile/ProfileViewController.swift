@@ -7,7 +7,6 @@
 
 import UIKit
 import HealthKit
-import Charts
 
 class ProfileViewController: UIViewController {
     
@@ -18,8 +17,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var DistanceLabel: UILabel!
     @IBOutlet weak var FloorClimedLabel: UILabel!
     @IBOutlet weak var SwimmingLabel: UILabel!
-
-    @IBOutlet weak var ChartUIView: UIView!
     
     var healthStore = HKHealthStore()
     var timer: Timer?

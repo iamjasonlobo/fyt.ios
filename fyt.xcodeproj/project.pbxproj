@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0538B61729F35AC600415AFE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538B61629F35AC600415AFE /* ProfileViewController.swift */; };
 		058997BA29F66A1E008E65E7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058997B929F66A1E008E65E7 /* HealthKit.framework */; };
-		058997BD29F712AA008E65E7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058997BC29F712AA008E65E7 /* Charts.framework */; };
 		05E9051A29ED1C770065B295 /* Avenir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051729ED1C770065B295 /* Avenir.ttf */; };
 		05E9051B29ED1C770065B295 /* AvenirNxt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */; };
 		05E9051C29ED1C770065B295 /* AvenirNxt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051929ED1C770065B295 /* AvenirNxt.otf */; };
@@ -63,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				058997BA29F66A1E008E65E7 /* HealthKit.framework in Frameworks */,
-				058997BD29F712AA008E65E7 /* Charts.framework in Frameworks */,
 				CB7896EC2935A3D500635932 /* ParseSwift in Frameworks */,
 				CB7896F429361CC600635932 /* AlamofireImage in Frameworks */,
 			);

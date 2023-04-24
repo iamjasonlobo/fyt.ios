@@ -624,7 +624,6 @@
                     <navigationItem key="navigationItem" title="fyt." id="mGc-7X-KQd"/>
                     <connections>
                         <outlet property="ActiveLabel" destination="f8u-bu-WCd" id="Ox3-Fg-NWD"/>
-                        <outlet property="ChartView" destination="8Jp-Qf-RX4" id="OC6-7g-Vdx"/>
                         <outlet property="DistanceLabel" destination="dfM-0d-bJW" id="uHT-Aw-5qM"/>
                         <outlet property="FloorClimedLabel" destination="Byw-F5-Lhf" id="Whv-xq-Fcl"/>
                         <outlet property="HeartRateLabel" destination="0lZ-Ax-POX" id="YFg-VB-f6H"/>
