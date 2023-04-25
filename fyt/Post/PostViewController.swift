@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ParseSwift
 
 // TODO: Import Photos UI
 import PhotosUI
@@ -17,12 +18,33 @@ class PostViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var captionTextField: UITextField!
+    @IBOutlet weak var workoutNameField: UITextField!
     @IBOutlet weak var previewImageView: UIImageView!
-
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     private var pickedImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // Customize placeholder color
+        // Get the named color asset
+        guard let fytFontGray = UIColor(named: "fytFontGray") else {
+            fatalError("Couldn't get named color asset")
+        }
+        // Set the placeholder text color for usernameField
+        let placeholderAttributes = [
+            NSAttributedString.Key.foregroundColor: fytFontGray
+        ]
+        captionTextField.attributedPlaceholder = NSAttributedString(string: "What do you want to say about it?", attributes: placeholderAttributes)
+        workoutNameField.attributedPlaceholder = NSAttributedString(string: "Workout name", attributes: placeholderAttributes)
+        
+        // Dyanamic Username
+        let user = User.current
+        usernameLabel.text = user?.username
+        
+        
     }
 
     @IBAction func onPickedImageTapped(_ sender: UIBarButtonItem) {
@@ -72,6 +94,7 @@ class PostViewController: UIViewController {
         // Set properties
         post.imageFile = imageFile
         post.caption = captionTextField.text
+        post.workout = workoutNameField.text
 
         // Set the user as the current user
         post.user = User.current

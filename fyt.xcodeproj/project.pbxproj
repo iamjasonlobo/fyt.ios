@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0538B61729F35AC600415AFE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538B61629F35AC600415AFE /* ProfileViewController.swift */; };
 		058997BA29F66A1E008E65E7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058997B929F66A1E008E65E7 /* HealthKit.framework */; };
+		05A30F4B29F7C47C00BFAF9B /* fytNavBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A30F4A29F7C47C00BFAF9B /* fytNavBarButtonItem.swift */; };
 		05E9051A29ED1C770065B295 /* Avenir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051729ED1C770065B295 /* Avenir.ttf */; };
 		05E9051B29ED1C770065B295 /* AvenirNxt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */; };
 		05E9051C29ED1C770065B295 /* AvenirNxt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E9051929ED1C770065B295 /* AvenirNxt.otf */; };
@@ -35,6 +36,7 @@
 		058997B929F66A1E008E65E7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		058997BB29F6DC22008E65E7 /* fyt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fyt.entitlements; sourceTree = "<group>"; };
 		058997BC29F712AA008E65E7 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = System/Library/Frameworks/Charts.framework; sourceTree = SDKROOT; };
+		05A30F4A29F7C47C00BFAF9B /* fytNavBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fytNavBarButtonItem.swift; sourceTree = "<group>"; };
 		05E9051729ED1C770065B295 /* Avenir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttf; sourceTree = "<group>"; };
 		05E9051829ED1C770065B295 /* AvenirNxt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNxt-Bold.otf"; sourceTree = "<group>"; };
 		05E9051929ED1C770065B295 /* AvenirNxt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirNxt.otf; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 				058997B929F66A1E008E65E7 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05A30F4929F7C43600BFAF9B /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				05A30F4A29F7C47C00BFAF9B /* fytNavBarButtonItem.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		CB13E51B2913A0E7008F45BB /* Login */ = {
@@ -152,6 +162,7 @@
 		CB73D393290E3B4A00C12538 /* fyt */ = {
 			isa = PBXGroup;
 			children = (
+				05A30F4929F7C43600BFAF9B /* UIComponents */,
 				058997BB29F6DC22008E65E7 /* fyt.entitlements */,
 				05E9051D29ED1DFB0065B295 /* Main.storyboard */,
 				CB73D394290E3B4A00C12538 /* AppDelegate.swift */,
@@ -266,6 +277,7 @@
 				CBCDFAFE291144DA001F1CF1 /* PostViewController.swift in Sources */,
 				CB73D399290E3B4A00C12538 /* LoginViewController.swift in Sources */,
 				CB73D395290E3B4A00C12538 /* AppDelegate.swift in Sources */,
+				05A30F4B29F7C47C00BFAF9B /* fytNavBarButtonItem.swift in Sources */,
 				CB6997532911354B007EDA6B /* FeedViewController.swift in Sources */,
 				CB7896EF2935DC4E00635932 /* User.swift in Sources */,
 				0538B61729F35AC600415AFE /* ProfileViewController.swift in Sources */,
