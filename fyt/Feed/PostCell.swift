@@ -16,6 +16,10 @@ class PostCell: UITableViewCell {
     @IBOutlet private weak var captionLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet weak var workoutNameLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var durationSuffixLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     
     private var imageDataRequest: DataRequest?
     
@@ -46,9 +50,11 @@ class PostCell: UITableViewCell {
         
         // Caption
         captionLabel.text = post.caption
-        
-        // Workout
         workoutNameLabel.text = post.workout
+        caloriesLabel.text = post.calories
+        durationLabel.text = post.duration
+        durationSuffixLabel.text = post.durationSuffix
+        distanceLabel.text = post.distance
         
 //        // Date
 //        if let date = post.createdAt {

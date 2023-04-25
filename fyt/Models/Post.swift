@@ -26,4 +26,8 @@ struct Post: ParseObject {
     var workout: String?
     var user: User?
     var imageFile: ParseFile?
+    var calories: String?
+    var duration: String?
+    var durationSuffix: String?
+    var distance: String?
 }

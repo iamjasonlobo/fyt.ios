@@ -570,7 +570,7 @@
                                                                                             <rect key="frame" x="28.000000000000028" y="0.0" width="65.333333333333329" height="25"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cxv-OC-7PJ">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="12.333333333333334"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="12.333333333333334"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2S-Vu-AYa">
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="12.333333333333334"/>
@@ -578,8 +578,8 @@
                                                                                                             <color key="textColor" name="fytWhite"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
-                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX1-5A-YoD">
-                                                                                                            <rect key="frame" x="39.333333333333314" y="0.0" width="11.333333333333336" height="12.333333333333334"/>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX1-5A-YoD">
+                                                                                                            <rect key="frame" x="39.333333333333314" y="0.0" width="21" height="12.333333333333334"/>
                                                                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                                                                                             <color key="textColor" name="fytFontGray"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -651,8 +651,12 @@
                                             <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="caloriesLabel" destination="YvS-6Y-rqe" id="81c-K3-CwS"/>
                                             <outlet property="captionLabel" destination="w5F-8W-aa3" id="JF4-sf-jGH"/>
                                             <outlet property="dateLabel" destination="fUP-Sn-Nbi" id="ou4-Bl-xg1"/>
+                                            <outlet property="distanceLabel" destination="p2S-Vu-AYa" id="Yyx-Tu-BoP"/>
+                                            <outlet property="durationLabel" destination="jxA-QA-Xns" id="SKJ-bm-FOG"/>
+                                            <outlet property="durationSuffixLabel" destination="jL4-Xr-kOA" id="pTo-T2-mfy"/>
                                             <outlet property="postImageView" destination="Evj-Nt-mAx" id="MV1-nU-fjJ"/>
                                             <outlet property="usernameLabel" destination="dQG-0t-OMT" id="eyh-yc-1i3"/>
                                             <outlet property="workoutNameLabel" destination="dTU-dF-CCZ" id="2KP-ut-Mvv"/>

@@ -320,6 +320,11 @@ class PostViewController: UIViewController {
         post.imageFile = imageFile
         post.caption = captionTextField.text
         post.workout = workoutNameField.text
+        post.calories = caloriesBurnedLabel.text
+        post.duration = durationLabel.text
+        post.durationSuffix = durationSuffixLabel.text
+        post.distance = distanceLabel.text
+        
 
         // Set the user as the current user
         post.user = User.current
