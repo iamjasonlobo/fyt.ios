@@ -7,10 +7,8 @@
 
 import UIKit
 import ParseSwift
-
-// TODO: Import Photos UI
+import HealthKit
 import PhotosUI
-// TODO: Import Parse Swift
 import ParseSwift
 
 class PostViewController: UIViewController {
@@ -21,8 +19,14 @@ class PostViewController: UIViewController {
     @IBOutlet weak var workoutNameField: UITextField!
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var caloriesBurnedLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var durationSuffixLabel: UILabel!
     
     private var pickedImage: UIImage?
+    
+    let healthStore = HKHealthStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +49,227 @@ class PostViewController: UIViewController {
         usernameLabel.text = user?.username
         
         
+        // healthkit
+        let typesToRead = Set([HKObjectType.workoutType(), HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!])
+        healthStore.requestAuthorization(toShare: nil, read: typesToRead) { (success, error) in
+            if success {
+                // Authorization was granted
+            } else {
+                // Handle error
+            }
+        }
+        
+        // Get Latest Workout
+        getLatestWorkout()
+    }
+    
+    func getLatestWorkout() {
+        let workoutType = HKObjectType.workoutType()
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: workoutType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, samples, error) in
+            if let workout = samples?.first as? HKWorkout {
+                // Use the workout data
+                let workoutName: String
+                
+                switch workout.workoutActivityType {
+                case .americanFootball:
+                    workoutName = "American Football"
+                case .archery:
+                    workoutName = "Archery"
+                case .australianFootball:
+                    workoutName = "Australian Football"
+                case .badminton:
+                    workoutName = "Badminton"
+                case .barre:
+                    workoutName = "Barre"
+                case .baseball:
+                    workoutName = "Baseball"
+                case .basketball:
+                    workoutName = "Basketball"
+                case .bowling:
+                    workoutName = "Bowling"
+                case .boxing:
+                    workoutName = "Boxing"
+                case .climbing:
+                    workoutName = "Climbing"
+                case .cooldown:
+                    workoutName = "Cooldown"
+                case .coreTraining:
+                    workoutName = "Core Training"
+                case .cricket:
+                    workoutName = "Cricket"
+                case .crossCountrySkiing:
+                    workoutName = "Cross Country Skiing"
+                case .crossTraining:
+                    workoutName = "Cross Training"
+                case .curling:
+                    workoutName = "Curling"
+                case .cycling:
+                    workoutName = "Cycling"
+                case .dance:
+                    workoutName = "Dance"
+                case .discSports:
+                    workoutName = "Disc Sports"
+                case .downhillSkiing:
+                    workoutName = "Downhill Skiing"
+                case .elliptical:
+                    workoutName = "Elliptical"
+                case .equestrianSports:
+                    workoutName = "Equestrian Sports"
+                case .fencing:
+                    workoutName = "Fencing"
+                case .fishing:
+                    workoutName = "Fishing"
+                case .fitnessGaming:
+                    workoutName = "Fitness Gaming"
+                case .flexibility:
+                    workoutName = "Flexibility"
+                case .functionalStrengthTraining:
+                    workoutName = "Functional Strength Training"
+                case .golf:
+                    workoutName = "Golf"
+                case .gymnastics:
+                    workoutName = "Gymnastics"
+                case .handCycling:
+                    workoutName = "Hand Cycling"
+                case .handball:
+                    workoutName = "Handball"
+                case .highIntensityIntervalTraining:
+                    workoutName = "High Intensity Interval Training"
+                case .hiking:
+                    workoutName = "Hiking"
+                case .hockey:
+                    workoutName = "Hockey"
+                case .hunting:
+                    workoutName = "Hunting"
+                case .jumpRope:
+                    workoutName = "Jump Rope"
+                case .kickboxing:
+                    workoutName = "Kickboxing"
+                case .lacrosse:
+                    workoutName = "Lacrosse"
+                case .martialArts:
+                    workoutName = "Martial Arts"
+                case .mindAndBody:
+                    workoutName = "Mind and Body"
+                case .mixedCardio:
+                    workoutName = "Mixed Cardio"
+                case .paddleSports:
+                    workoutName = "Paddle Sports"
+                case .pickleball:
+                    workoutName = "Pickleball"
+                case .pilates:
+                    workoutName = "Pilates"
+                case .play:
+                    workoutName = "Play"
+                case .preparationAndRecovery:
+                    workoutName = "Preparation And Recovery"
+                case .racquetball:
+                    workoutName = "Racquetball"
+                case .rowing:
+                    workoutName = "Rowing"
+                case .rugby:
+                    workoutName = "Rugby"
+                case .running:
+                    workoutName = "Running"
+                case .sailing:
+                    workoutName = "Sailing"
+                case .skatingSports:
+                    workoutName = "Skating Sports"
+                case .snowSports:
+                    workoutName = "Snow Sports"
+                case .snowboarding:
+                    workoutName = "Snowboarding"
+                case .soccer:
+                    workoutName = "Soccer"
+                case .socialDance:
+                    workoutName = "Social Dance"
+                case .softball:
+                    workoutName = "Softball"
+                case .squash:
+                    workoutName = "Squash"
+                case .stairClimbing:
+                    workoutName = "Stair Stepper"
+                case .stairs:
+                    workoutName = "Stairs"
+                case .stepTraining:
+                    workoutName = "Step Training"
+                case .surfingSports:
+                    workoutName = "Surfing Sports"
+                case .swimming:
+                    workoutName = "Swimming"
+                case .tableTennis:
+                    workoutName = "Table Tennis"
+                case .taiChi:
+                    workoutName = "Tai Chi"
+                case .tennis:
+                    workoutName = "Tennis"
+                case .trackAndField:
+                    workoutName = "Track And Field"
+                case .traditionalStrengthTraining:
+                    workoutName = "Traditional Strength Training"
+                case .volleyball:
+                    workoutName = "Volleyball"
+                case .walking:
+                    workoutName = "Walking"
+                case .waterFitness:
+                    workoutName = "Water Fitness"
+                case .waterPolo:
+                    workoutName = "Water Polo"
+                case .waterSports:
+                    workoutName = "Water Sports"
+                case .wheelchairRunPace:
+                    workoutName = "Wheelchair Run Race"
+                case .wheelchairWalkPace:
+                    workoutName = "Wheelchair Walk Race"
+                case .wrestling:
+                    workoutName = "Wrestling"
+                case .yoga:
+                    workoutName = "Yoga"
+                default:
+                    workoutName = "Other"
+                }
+                
+                let caloriesBurned = workout.totalEnergyBurned?.doubleValue(for: .kilocalorie())
+                
+                
+                // Convert duration to hours/minutes/seconds
+                let durationInSeconds = Int(workout.duration)
+                var durationSuffix = ""
+                let hours = durationInSeconds / 3600
+                let minutes = (durationInSeconds % 3600) / 60
+                let seconds = (durationInSeconds % 3600) % 60
+                var durationText = ""
+                if hours > 0 {
+                    let fractionalHours = Double(durationInSeconds) / 3600.0
+                    durationText = String(format: "%.1f", fractionalHours)
+                    durationSuffix = fractionalHours == 1.0 ? "hr" : "hrs"
+                } else if minutes > 0 {
+                    durationText = "\(minutes)"
+                    durationSuffix = " min" + (minutes > 1 ? "s" : "")
+                } else if seconds > 0 {
+                    durationText = "\(seconds)"
+                    durationSuffix = "sec" + (seconds > 1 ? "s" : "")
+                }
+                
+                // Convert distance to miles
+                let distanceInMeters = workout.totalDistance?.doubleValue(for: .meter()) ?? 0
+                let distanceInMiles = distanceInMeters * 0.000621371
+                let distanceText = String(format: "%.1f", distanceInMiles)
+                
+                // Update labels
+                DispatchQueue.main.async {
+                    self.workoutNameField.text = workoutName
+                    self.caloriesBurnedLabel.text = "\(Int(caloriesBurned ?? 0))" //kcal
+                    self.durationLabel.text = durationText
+                    self.durationSuffixLabel.text = durationSuffix
+                    self.distanceLabel.text = distanceText //miles
+                }
+            } else {
+                // Handle error
+            }
+        }
+        healthStore.execute(query)
     }
 
     @IBAction func onPickedImageTapped(_ sender: UIBarButtonItem) {
