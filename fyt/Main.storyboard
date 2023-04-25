@@ -336,8 +336,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="if7-R7-g8V">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="if7-R7-g8V">
                                 <rect key="frame" x="21" y="91" width="348" height="670"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="fytBackBlack"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -349,22 +350,49 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fg2-JN-NsP">
-                                                    <rect key="frame" x="0.0" y="18" width="348" height="498"/>
+                                                    <rect key="frame" x="0.0" y="21" width="348" height="506"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-YD-cku">
-                                                            <rect key="frame" x="8" y="21" width="332" height="33"/>
+                                                            <rect key="frame" x="8" y="21.000000000000004" width="332" height="48.333333333333343"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hGf-z4-Kdf">
-                                                                    <rect key="frame" x="16" y="0.0" width="300" height="33"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hGf-z4-Kdf">
+                                                                    <rect key="frame" x="16" y="0.0" width="300" height="48.333333333333336"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kingsley" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQG-0t-OMT">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="19.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-Sn-Nbi">
-                                                                            <rect key="frame" x="0.0" y="19.333333333333336" width="300" height="13.666666666666664"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ge5-A8-0eh">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="48.333333333333336"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kingsley" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQG-0t-OMT">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="29"/>
+                                                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                                                                    <color key="textColor" name="fytWhite"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-Je-lpu">
+                                                                                    <rect key="frame" x="0.0" y="29" width="150" height="19.333333333333329"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ngo-P3-hge">
+                                                                                            <rect key="frame" x="0.0" y="-0.66666666666666607" width="13.666666666666666" height="20.666666666666664"/>
+                                                                                            <imageReference key="image" image="bolt.fill" catalog="system" renderingMode="hierarchical">
+                                                                                                <hierarchicalColors>
+                                                                                                    <color name="fytBlueAccent"/>
+                                                                                                    <color systemColor="secondaryLabelColor"/>
+                                                                                                    <color systemColor="tertiaryLabelColor"/>
+                                                                                                </hierarchicalColors>
+                                                                                            </imageReference>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+                                                                                        </imageView>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="Mountain Hike" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="124.7" translatesAutoresizingMaskIntoConstraints="NO" id="dTU-dF-CCZ">
+                                                                                            <rect key="frame" x="16.666666666666671" y="0.0" width="133.33333333333331" height="19.333333333333332"/>
+                                                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 hours ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-Sn-Nbi">
+                                                                            <rect key="frame" x="150" y="0.0" width="150" height="48.333333333333336"/>
                                                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
                                                                             <color key="textColor" name="fytFontGray"/>
                                                                             <nil key="highlightedColor"/>
@@ -375,7 +403,7 @@
                                                             <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jot-jt-fPT">
-                                                            <rect key="frame" x="8" y="62" width="332" height="332"/>
+                                                            <rect key="frame" x="8" y="77.333333333333314" width="332" height="332"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-Nt-mAx">
                                                                     <rect key="frame" x="0.0" y="0.0" width="332" height="332"/>
@@ -401,23 +429,210 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H99-cw-T4O">
-                                                            <rect key="frame" x="8" y="402" width="332" height="75"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="H99-cw-T4O">
+                                                            <rect key="frame" x="8" y="417.33333333333331" width="332" height="67.666666666666686"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="What an awesome day!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-8W-aa3">
-                                                                    <rect key="frame" x="16" y="0.0" width="300" height="75"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igV-Kb-0dP">
+                                                                    <rect key="frame" x="16" y="8.0000000000000018" width="300" height="30.666666666666671"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kMj-Ba-KNp">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="30.666666666666668"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="rUa-0a-xXd" userLabel="CalorieView">
+                                                                                    <rect key="frame" x="0.0" y="3" width="93.333333333333329" height="25"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vHm-LA-roX">
+                                                                                            <rect key="frame" x="0.0" y="-2.3333333333333339" width="25" height="29.666666666666671"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="25" id="nfB-5Z-dTy"/>
+                                                                                                <constraint firstAttribute="width" constant="25" id="uOL-RY-kO3"/>
+                                                                                            </constraints>
+                                                                                            <imageReference key="image" image="flame.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                                                                <hierarchicalColors>
+                                                                                                    <color name="fytStackBlack"/>
+                                                                                                    <color name="fytStackBlack"/>
+                                                                                                    <color red="0.99607843139999996" green="0.43137254899999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                </hierarchicalColors>
+                                                                                            </imageReference>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15"/>
+                                                                                        </imageView>
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lXC-84-XPS">
+                                                                                            <rect key="frame" x="28" y="0.0" width="65.333333333333329" height="25"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="b0T-8c-IDr">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="12.333333333333334"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxA-QA-Xns">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="12.333333333333334"/>
+                                                                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                                                                                            <color key="textColor" name="fytWhite"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-Xr-kOA">
+                                                                                                            <rect key="frame" x="39.333333333333329" y="0.0" width="11.333333333333336" height="12.333333333333334"/>
+                                                                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
+                                                                                                            <color key="textColor" name="fytFontGray"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burnt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJy-OH-pwf">
+                                                                                                    <rect key="frame" x="0.0" y="12.333333333333371" width="64.333333333333329" height="12.666666666666664"/>
+                                                                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
+                                                                                                    <color key="textColor" name="fytWhite"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
+                                                                                            </subviews>
+                                                                                        </stackView>
+                                                                                    </subviews>
+                                                                                    <color key="backgroundColor" name="fytStackBlack"/>
+                                                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <integer key="value" value="30"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zc-aH-66n" userLabel="CalorieView">
+                                                                                    <rect key="frame" x="103.33333333333334" y="3" width="93.333333333333343" height="25"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-qg-ucd">
+                                                                                            <rect key="frame" x="0.0" y="-2.3333333333333339" width="25" height="29.666666666666671"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="25" id="CD7-rx-CGh"/>
+                                                                                                <constraint firstAttribute="width" constant="25" id="KnY-Gv-EjE"/>
+                                                                                            </constraints>
+                                                                                            <imageReference key="image" image="flame.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                                                                <hierarchicalColors>
+                                                                                                    <color name="fytStackBlack"/>
+                                                                                                    <color name="fytStackBlack"/>
+                                                                                                    <color red="0.99607843139999996" green="0.43137254899999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                </hierarchicalColors>
+                                                                                            </imageReference>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15"/>
+                                                                                        </imageView>
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QMo-ft-yIW">
+                                                                                            <rect key="frame" x="28.000000000000014" y="0.0" width="65.333333333333329" height="25"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="rb2-vo-0RV">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="12.333333333333334"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvS-6Y-rqe">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="12.333333333333334"/>
+                                                                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                                                                                            <color key="textColor" name="fytWhite"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA6-Mc-I27">
+                                                                                                            <rect key="frame" x="39.333333333333314" y="0.0" width="11.333333333333336" height="12.333333333333334"/>
+                                                                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
+                                                                                                            <color key="textColor" name="fytFontGray"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burnt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHT-kP-ni5">
+                                                                                                    <rect key="frame" x="0.0" y="12.333333333333371" width="64.333333333333329" height="12.666666666666664"/>
+                                                                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
+                                                                                                    <color key="textColor" name="fytWhite"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
+                                                                                            </subviews>
+                                                                                        </stackView>
+                                                                                    </subviews>
+                                                                                    <color key="backgroundColor" name="fytStackBlack"/>
+                                                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <integer key="value" value="30"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jYP-zl-sn1" userLabel="CalorieView">
+                                                                                    <rect key="frame" x="206.66666666666666" y="3" width="93.333333333333343" height="25"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="esG-5m-gyS">
+                                                                                            <rect key="frame" x="0.0" y="-2.3333333333333339" width="25" height="29.666666666666671"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="width" constant="25" id="Hhk-Z2-PhM"/>
+                                                                                                <constraint firstAttribute="height" constant="25" id="q55-Ih-y8I"/>
+                                                                                            </constraints>
+                                                                                            <imageReference key="image" image="flame.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                                                                <hierarchicalColors>
+                                                                                                    <color name="fytStackBlack"/>
+                                                                                                    <color name="fytStackBlack"/>
+                                                                                                    <color red="0.99607843139999996" green="0.43137254899999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                </hierarchicalColors>
+                                                                                            </imageReference>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15"/>
+                                                                                        </imageView>
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kex-RZ-qQF">
+                                                                                            <rect key="frame" x="28.000000000000028" y="0.0" width="65.333333333333329" height="25"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cxv-OC-7PJ">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="12.333333333333334"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2S-Vu-AYa">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="12.333333333333334"/>
+                                                                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                                                                                            <color key="textColor" name="fytWhite"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX1-5A-YoD">
+                                                                                                            <rect key="frame" x="39.333333333333314" y="0.0" width="11.333333333333336" height="12.333333333333334"/>
+                                                                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
+                                                                                                            <color key="textColor" name="fytFontGray"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burnt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfW-TB-KIA">
+                                                                                                    <rect key="frame" x="0.0" y="12.333333333333371" width="64.333333333333329" height="12.666666666666664"/>
+                                                                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
+                                                                                                    <color key="textColor" name="fytWhite"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
+                                                                                            </subviews>
+                                                                                        </stackView>
+                                                                                    </subviews>
+                                                                                    <color key="backgroundColor" name="fytStackBlack"/>
+                                                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <integer key="value" value="30"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Pg7-Ar-7fm">
+                                                                    <rect key="frame" x="16" y="52.666666666666686" width="300" height="15"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote.bubble.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lEb-Bs-uPC">
+                                                                            <rect key="frame" x="0.0" y="0.66666666666666607" width="15" height="14.666666666666666"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="15" id="7gk-sA-nej"/>
+                                                                                <constraint firstAttribute="height" constant="15" id="fUv-Rd-Zx0"/>
+                                                                            </constraints>
+                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="What an awesome day!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-8W-aa3">
+                                                                            <rect key="frame" x="19" y="0.0" width="273" height="15"/>
+                                                                            <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="8"/>
+                                                                </stackView>
                                                             </subviews>
-                                                            <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
+                                                            <edgeInsets key="layoutMargins" top="8" left="16" bottom="0.0" right="16"/>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="fytStackBlack"/>
-                                                    <constraints>
-                                                        <constraint firstItem="jot-jt-fPT" firstAttribute="width" secondItem="jot-jt-fPT" secondAttribute="height" multiplier="1:1" id="HfT-ks-JKy"/>
-                                                    </constraints>
                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="21" leading="8" bottom="21" trailing="8"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -430,8 +645,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="fg2-JN-NsP" secondAttribute="trailing" id="HNO-Mm-dwd"/>
                                                 <constraint firstItem="fg2-JN-NsP" firstAttribute="leading" secondItem="EvC-EF-v9N" secondAttribute="leading" id="Q3z-gr-UxI"/>
-                                                <constraint firstItem="fg2-JN-NsP" firstAttribute="top" secondItem="EvC-EF-v9N" secondAttribute="topMargin" constant="7" id="l7u-oT-9Gk"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fg2-JN-NsP" secondAttribute="bottom" priority="999" id="vit-td-jAp"/>
+                                                <constraint firstItem="fg2-JN-NsP" firstAttribute="top" secondItem="EvC-EF-v9N" secondAttribute="top" constant="21" id="Sgr-5z-1Aw"/>
+                                                <constraint firstAttribute="bottom" secondItem="fg2-JN-NsP" secondAttribute="bottom" id="viC-NO-eKh"/>
                                             </constraints>
                                             <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                         </tableViewCellContentView>
@@ -448,12 +663,6 @@
                         <viewLayoutGuide key="safeArea" id="9ww-49-hW1"/>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.035294117649999998" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="if7-R7-g8V" firstAttribute="top" secondItem="9ww-49-hW1" secondAttribute="top" id="6u7-E6-mHz"/>
-                            <constraint firstItem="if7-R7-g8V" firstAttribute="leading" secondItem="9ww-49-hW1" secondAttribute="leading" constant="21" id="K9f-LX-H74"/>
-                            <constraint firstItem="9ww-49-hW1" firstAttribute="trailing" secondItem="if7-R7-g8V" secondAttribute="trailing" constant="21" id="YE3-gX-BWa"/>
-                            <constraint firstAttribute="bottom" secondItem="if7-R7-g8V" secondAttribute="bottom" id="gSb-1R-JSD"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="fyt." id="LaS-Bo-eDE">
                         <barButtonItem key="backBarButtonItem" title=" " id="3DH-ur-kyc"/>
@@ -987,6 +1196,7 @@
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="bed.double.circle.fill" catalog="system" width="128" height="123"/>
         <image name="bolt.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="bolt.fill" catalog="system" width="100" height="128"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="circle.dashed.inset.filled" catalog="system" width="128" height="123"/>
         <image name="flame.circle.fill" catalog="system" width="128" height="123"/>
@@ -996,6 +1206,7 @@
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="quote.bubble.fill" catalog="system" width="128" height="110"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.78431372549019607" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1029,11 +1240,17 @@
         <systemColor name="quaternaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
