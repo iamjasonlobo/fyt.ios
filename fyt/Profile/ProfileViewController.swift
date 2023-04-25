@@ -7,6 +7,7 @@
 
 import UIKit
 import HealthKit
+import ParseSwift
 
 class ProfileViewController: UIViewController {
     
@@ -14,17 +15,22 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var StepsLabel: UILabel!
     @IBOutlet weak var ActiveLabel: UILabel!
     @IBOutlet weak var SleepLabel: UILabel!
-    @IBOutlet weak var DistanceLabel: UILabel!
-    @IBOutlet weak var FloorClimedLabel: UILabel!
-    @IBOutlet weak var SwimmingLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var healthStore = HKHealthStore()
     var timer: Timer?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Adding username and full name to label
+        let user = User.current
+        usernameLabel.text = user?.username
+        nameLabel.text = user?.fullName
+        
         self.authorizeHealthkit()
-
+        
+        
         // Do any additional setup after loading the view.
         // Adding fyt. logo to the navbar
         let logoView = UIView(frame: CGRect(x: 0, y: 0, width: 90, height: 45))
@@ -40,19 +46,16 @@ class ProfileViewController: UIViewController {
     }
     
     func authorizeHealthkit(){
-        let read = Set([HKCategoryType.quantityType(forIdentifier: .stepCount)!,HKCategoryType.quantityType(forIdentifier: .heartRate)!,HKCategoryType.quantityType(forIdentifier: .distanceWalkingRunning)!,HKCategoryType.quantityType(forIdentifier: .flightsClimbed)!,HKCategoryType.quantityType(forIdentifier: .distanceSwimming)!,HKCategoryType.quantityType(forIdentifier: .activeEnergyBurned)!,HKCategoryType.categoryType(forIdentifier: .sleepAnalysis)!])
-        let share = Set([HKCategoryType.quantityType(forIdentifier: .stepCount)!,HKCategoryType.quantityType(forIdentifier: .heartRate)!,HKCategoryType.quantityType(forIdentifier: .distanceWalkingRunning)!,HKCategoryType.quantityType(forIdentifier: .flightsClimbed)!,HKCategoryType.quantityType(forIdentifier: .distanceSwimming)!,HKCategoryType.quantityType(forIdentifier: .activeEnergyBurned)!, HKCategoryType.categoryType(forIdentifier: .sleepAnalysis)!])
+        let read = Set([HKCategoryType.quantityType(forIdentifier: .stepCount)!,HKCategoryType.quantityType(forIdentifier: .heartRate)!,HKCategoryType.quantityType(forIdentifier: .activeEnergyBurned)!,HKCategoryType.categoryType(forIdentifier: .sleepAnalysis)!])
+        let share = Set([HKCategoryType.quantityType(forIdentifier: .stepCount)!,HKCategoryType.quantityType(forIdentifier: .heartRate)!,HKCategoryType.quantityType(forIdentifier: .activeEnergyBurned)!, HKCategoryType.categoryType(forIdentifier: .sleepAnalysis)!])
         healthStore.requestAuthorization(toShare: share, read: read) { chk, error in
             if(chk){
                 // Calling health kit functions
                 print("permisssion granted")
-                    self.getTodayTotalStepCounts()
-                    self.getLatestHeartRate()
-                    self.getTodayDistanceTravel()
-                    self.getTodayFloorClimbed()
-                    self.getTodayDistanceSwimming()
-                    self.getTodayActiveEnergy()
-                    self.getSleepAnalysis()
+                self.getTodayTotalStepCounts()
+                self.getLatestHeartRate()
+                self.getTodayActiveEnergy()
+                self.getSleepAnalysis()
             }
         }
     }
@@ -76,10 +79,10 @@ class ProfileViewController: UIViewController {
                         print("Total step taken today is \(val) steps")
                         
                         DispatchQueue.main.async{
-                            self.StepsLabel.text = "\(Int(val)) steps"
+                            self.StepsLabel.text = "\(Int(val))"
                             
                         }
-                     
+                        
                         
                     }
                 }
@@ -93,31 +96,31 @@ class ProfileViewController: UIViewController {
     func getLatestHeartRate(){
         
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else {
-             return
-         }
-         
-         let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())!
-         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: nil, options: .strictEndDate)
-         
-         let observerQuery = HKObserverQuery(sampleType: sampleType, predicate: predicate) { query, completionHandler, error in
-             if error != nil {
-                 print("Error: \(error!.localizedDescription)")
-                 return
-             }
-             
-             self.fetchLatestHeartRate { heartRate in
-                 DispatchQueue.main.async {
-                     self.HeartRateLabel.text = "\(Int(heartRate))"
-                 }
-             }
-             
-             completionHandler()
-         }
-         
-         healthStore.execute(observerQuery)
-            
-            
+            return
         }
+        
+        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())!
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: nil, options: .strictEndDate)
+        
+        let observerQuery = HKObserverQuery(sampleType: sampleType, predicate: predicate) { query, completionHandler, error in
+            if error != nil {
+                print("Error: \(error!.localizedDescription)")
+                return
+            }
+            
+            self.fetchLatestHeartRate { heartRate in
+                DispatchQueue.main.async {
+                    self.HeartRateLabel.text = "\(Int(heartRate))"
+                }
+            }
+            
+            completionHandler()
+        }
+        
+        healthStore.execute(observerQuery)
+        
+        
+    }
     
     func fetchLatestHeartRate(completion: @escaping (Double) -> Void) {
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else {
@@ -143,39 +146,39 @@ class ProfileViewController: UIViewController {
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
             return
         }
-
+        
         let startDate = Calendar.current.startOfDay(for: Date())
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: nil, options: .strictEndDate)
-
+        
         let observerQuery = HKObserverQuery(sampleType: sampleType, predicate: predicate) { query, completionHandler, error in
             if error != nil {
                 print("Error: \(error!.localizedDescription)")
                 return
             }
-
+            
             self.fetchLatestActiveEnergy { activeEnergy in
                 DispatchQueue.main.async {
-                    self.ActiveLabel.text = "\(Int(activeEnergy)) kcal"
+                    self.ActiveLabel.text = "\(Int(activeEnergy))"
                 }
             }
-
+            
             completionHandler()
         }
-
+        
         healthStore.execute(observerQuery)
-
+        
         fetchLatestActiveEnergy { activeEnergy in
             DispatchQueue.main.async {
-                self.ActiveLabel.text = "\(Int(activeEnergy)) kcal"
+                self.ActiveLabel.text = "\(Int(activeEnergy))"
             }
         }
     }
-
+    
     func fetchLatestActiveEnergy(completion: @escaping (Double) -> Void) {
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
             return
         }
-
+        
         let startDate = Calendar.current.startOfDay(for: Date())
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: nil, options: .strictEndDate)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
@@ -183,11 +186,11 @@ class ProfileViewController: UIViewController {
             guard let activeEnergySample = results?.first as? HKQuantitySample else {
                 return
             }
-
+            
             let activeEnergy = activeEnergySample.quantity.doubleValue(for: HKUnit.kilocalorie())
             completion(activeEnergy)
         }
-
+        
         healthStore.execute(query)
     }
     
@@ -222,7 +225,7 @@ class ProfileViewController: UIViewController {
             self.fetchSleepAnalysis(startDate: startDate) { sleepAnalysis in
                 DispatchQueue.main.async {
                     let sleepHours = Double(sleepAnalysis) / 3600.0
-                    self.SleepLabel.text = String(format: "%.1f hours", sleepHours)
+                    self.SleepLabel.text = String(format: "%.1f", sleepHours)
                 }
             }
         }
@@ -236,14 +239,14 @@ class ProfileViewController: UIViewController {
             self.fetchSleepAnalysis(startDate: startDate) { sleepAnalysis in
                 DispatchQueue.main.async {
                     let sleepHours = Double(sleepAnalysis) / 3600.0
-                    self.SleepLabel.text = String(format: "%.1f hours", sleepHours)
+                    self.SleepLabel.text = String(format: "%.1f", sleepHours)
                 }
             }
         }
         
         healthStore.execute(anchoredQuery)
     }
-
+    
     func fetchSleepAnalysis(startDate: Date, completion: @escaping (Int) -> Void) {
         let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: nil, options: .strictEndDate)
@@ -267,104 +270,6 @@ class ProfileViewController: UIViewController {
             completion(totalSleepDuration)
         }
         
-        healthStore.execute(query)
-    }
-    
-    func getTodayDistanceTravel(){
-        guard let sampleType = HKCategoryType.quantityType(forIdentifier: .distanceWalkingRunning) else{
-            return
-        }
-
-        let startDate = Calendar.current.startOfDay(for: Date())
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
-        var interval = DateComponents()
-        interval.day = 1
-        let query = HKStatisticsCollectionQuery(quantityType: sampleType, quantitySamplePredicate: predicate, options: [.cumulativeSum], anchorDate: startDate, intervalComponents: interval)
-        query.initialResultsHandler = {
-            query, result, error in
-            if let myresult = result {
-                myresult.enumerateStatistics(from: startDate, to: Date()) { (statistics,value) in
-                    if let count = statistics.sumQuantity(){
-                        let val = count.doubleValue(for: HKUnit.mile())
-                        let miles = String(format:"%.2f miles",val)
-                        print("Total travel distance today is \(miles)")
-
-                        DispatchQueue.main.async{
-                            self.DistanceLabel.text = "\(miles)"
-
-                        }
-
-
-                    }
-                }
-            }
-
-        }
-        healthStore.execute(query)
-    }
-    
-    
-    func getTodayFloorClimbed(){
-        guard let sampleType = HKCategoryType.quantityType(forIdentifier: .flightsClimbed) else{
-            return
-        }
-        
-        let startDate = Calendar.current.startOfDay(for: Date())
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
-        var interval = DateComponents()
-        interval.day = 1
-        let query = HKStatisticsCollectionQuery(quantityType: sampleType, quantitySamplePredicate: predicate, options: [.cumulativeSum], anchorDate: startDate, intervalComponents: interval)
-        query.initialResultsHandler = {
-            query, result, error in
-            if let myresult = result {
-                myresult.enumerateStatistics(from: startDate, to: Date()) { (statistics,value) in
-                    if let count = statistics.sumQuantity(){
-                        let val = count.doubleValue(for: HKUnit.count())
-                        print("Total floor climbed is \(val) floors")
-                        
-                        DispatchQueue.main.async{
-                            self.FloorClimedLabel.text = "\(Int(val)) floors"
-                            
-                        }
-                     
-                        
-                    }
-                }
-            }
-            
-        }
-        healthStore.execute(query)
-    }
-    func getTodayDistanceSwimming(){
-        guard let sampleType = HKCategoryType.quantityType(forIdentifier: .distanceSwimming) else{
-            return
-        }
-        
-        let startDate = Calendar.current.startOfDay(for: Date())
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
-        var interval = DateComponents()
-        interval.day = 1
-        let query = HKStatisticsCollectionQuery(quantityType: sampleType, quantitySamplePredicate: predicate, options: [.cumulativeSum], anchorDate: startDate, intervalComponents: interval)
-        query.initialResultsHandler = {
-            query, result, error in
-            if let myresult = result {
-                myresult.enumerateStatistics(from: startDate, to: Date()) { (statistics,value) in
-                    if let count = statistics.sumQuantity(){
-                        let val = count.doubleValue(for: HKUnit.yard())
-                        let yards = String(format:"%.2f yards",val)
-                        print("Total swimming distance today is \(yards)")
-                        
-                        DispatchQueue.main.async{
-                            self.SwimmingLabel.text = "\(yards)"
-                            
-                        }
-                     
-                        
-                    }
-                }
-            }
-            
-        }
         healthStore.execute(query)
     }
 }
