@@ -1,14 +1,14 @@
 # fyt.ios
 
 ## Table of Contents
-1.  [Overview](Overview)
-2.  [Product Spec](Product-Spec)
-    -   [User Stories](User-Stories)
-        -   [Required](Required)
-        -   [Screen Archetypes](Screen-Archetypes)
-        -   [Navigation](Navigation)
-3.  [Product Demo](Product-Demo)
-4.  [UI protoype screens](UI-protoype-screens)
+1.  [Overview](https://github.com/iamjasonlobo/fyt.ios/main/README.md#Overview)
+2.  [Product Spec](https://github.com/iamjasonlobo/fyt.ios/main/README.md#Product-Spec)
+    -   [User Stories](https://github.com/iamjasonlobo/fyt.ios/main/README.md#User-Stories)
+        -   [Required](https://github.com/iamjasonlobo/fyt.ios/main/README.md#Required)
+        -   [Screen Archetypes](https://github.com/iamjasonlobo/fyt.ios/main/README.md#Screen-Archetypes)
+        -   [Navigation](https://github.com/iamjasonlobo/fyt.ios/main/README.md#Navigation)
+3.  [Product Demo](https://github.com/iamjasonlobo/fyt.ios/main/README.md#Product-Demo)
+4.  [UI protoype screens](https://github.com/iamjasonlobo/fyt.ios/main/README.md#UI-protoype-screens)
 
 ## Overview
 
