@@ -1,55 +1,75 @@
-# fyt. - A fitness lifestyle app
+# fyt.ios
 
 ## Table of Contents
-1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
+1.  [Overview](https://chat.openai.com/#Overview)
+2.  [Product Spec](https://chat.openai.com/#Product-Spec)
+    -   [User Stories](https://chat.openai.com/#user-stories)
+        -   [Required](https://chat.openai.com/#required)
+        -   [Optional](https://chat.openai.com/#optional)
+    -   [Screen Archetypes](https://chat.openai.com/#screen-archetypes)
+    -   [Navigation](https://chat.openai.com/#navigation)
+3.  [Wireframes](https://chat.openai.com/#Wireframes)
+4.  [Milestones](https://chat.openai.com/#Milestones)
 
 ## Overview
+
 ### Description
-fyt. is a fitness lifestyle app with a goal to enable fit lifestyle for our users through positive reinforcement and health data analytics.
+
+fyt is a social fitness app designed to motivate users to workout and stay active. The app has two main views - fyt.social and fyt.me. The social feed allows users to share their workout photos and data, and view posts from other users in the fyt.community. fyt.me provides users with a summary of their health and fitness data for the day, including steps, heart rate, active energy, and sleep.
 
 ### App Evaluation
-- **Category:** Fitness
-- **Mobile:** This app would be primarily developed for mobile.
-- **Story:** A fitness lifestyle based social media app allowing users to post workouts in form of images and workout health data. It also allows users to get a glimpse of all their health data, encouraging them to engage in a fit lifestyle.
-- **Market:** Any individual could choose to use this app, and to keep it a safe environment.
-- **Habit:** This app could be used everyday.
-- **Scope:** Two weeks.
+
+-   Category: Health & Fitness / Social Networking
+-   Mobile: The app is designed for mobile, specifically iOS devices.
+-   Story: The app aims to motivate users to workout and stay active by allowing them to share their fitness journey with a supportive community.
+-   Market: This app is designed for individuals who are interested in fitness and are looking for a supportive community to help them stay motivated.
+-   Habit: This app can be used daily by individuals looking to track their fitness progress and stay motivated.
+-   Scope: FYT is a social fitness app designed to motivate users to workout and stay active. In future updates, additional features could be added to the app, such as workout challenges and personalized workout recommendations.
 
 ## Product Spec
-### 1. User Stories (Required and Optional)
 
-**Required Must-have Stories**
+### User Stories
 
-* Login/Signup screens allowing users to signup and login to the application
-* A social media feed showcasing workout posts of users in the last 24 hours, the post includes images and other health data generated during the workout.
-* A post screen allowing users to upload or capture workout image, along with preview for health data for the latest health data.
-* A profile/analytics screen showing different health analytics of the user that have been generated throughout the day, these may include step count, calories, distance covered, resting heartbeat,type of workout,water intake etc.
+-   Users can view the fyt.social feed to see workout posts from other users in the fyt.community.
+-   Users can create a post on fyt.post to share their workout photos and workout data (support for 77 Apple Health Workout) with the fyt.community.
+-   Users can view daily health and fitness data on the fyt.me screen.
+-   Users can customize name of their latest workout and add a caption to the post on fyt.social.
+-   Users can upload photos to their post on fyt.social from camera or photo gallery.
 
-**Optional Nice-to-have Stories**
+### Screen Archetypes
 
-* Likes on posts
-* Comments for posts
-* Share post to other platfoms as an image
+-   Login
+-   Register - User signs up or logs into their account
+-   Social Feed Screen - Displays posts from other users in the fyt.community
+-   Post Screen - Allows users to create a post to share their workout photos and data with the fyt.community
+-   Profile Screen - Displays user's profile information and settings
+-   FYT.me Screen - Displays user's health and fitness data for the day
+-   Settings Screen - Allows user to adjust app settings
+
+### Navigation
+
+Tab Navigation (Tab to Screen)
+
+-   Social Feed
+-   Post
+-   Profile
+
+Flow Navigation (Screen to Screen)
+
+-   Login/Register Screen
+    -   Social Feed Screen
+-   Social Feed Screen
+    -   Post Screen
+-   Post Screen
+    -   Social Feed Screen
+-   Profile Screen
+
+## Product Demo
+
+https://user-images.githubusercontent.com/105331420/235343995-ab1ee9e7-3398-41c8-bf57-417f2a1e7d4a.mp4
 
 
-### 2. Screen Archetypes
 
-* Login/Signup - User signs up or logs into their account
-* Social feed - Feed consisting of all workout images, with workout analytics
-* Profile Screen - Collection of analytics of user health data 
+## UI protoype screens [Figma]
 
-### 3. Navigation
-
-**Tab Navigation** (Tab to Screen)
-
-* Social Feed
-* Profile Analytics
-
-**Flow Navigation** (Screen to Screen)
-* Sign up -> Log-in.This is where a user creates an account and signs in.
-* Social Feed -> Post -> Photo upload
-
-### Digital Wireframes
-![Frame 54](https://user-images.githubusercontent.com/105331420/231996338-19968f45-21d1-4180-a330-2f385c05a6b8.png)
+![Frame 54](https://user-images.githubusercontent.com/105331420/235343726-b086a321-aa65-4c7e-8eec-3d5323f58d26.png)
