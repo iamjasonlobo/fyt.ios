@@ -1,15 +1,14 @@
 # fyt.ios
 
 ## Table of Contents
-1.  [Overview](https://chat.openai.com/#Overview)
-2.  [Product Spec](https://chat.openai.com/#Product-Spec)
-    -   [User Stories](https://chat.openai.com/#user-stories)
-        -   [Required](https://chat.openai.com/#required)
-        -   [Optional](https://chat.openai.com/#optional)
-    -   [Screen Archetypes](https://chat.openai.com/#screen-archetypes)
-    -   [Navigation](https://chat.openai.com/#navigation)
-3.  [Wireframes](https://chat.openai.com/#Wireframes)
-4.  [Milestones](https://chat.openai.com/#Milestones)
+1.  [Overview](Overview)
+2.  [Product Spec](Product-Spec)
+    -   [User Stories](User-Stories)
+        -   [Required](Required)
+        -   [Screen Archetypes](Screen-Archetypes)
+        -   [Navigation](Navigation)
+3.  [Product Demo](Product-Demo)
+4.  [UI protoype screens](UI-protoype-screens)
 
 ## Overview
 
