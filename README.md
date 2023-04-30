@@ -2,13 +2,14 @@
 
 ## Table of Contents
 1.  [Overview](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Overview)
-2.  [Product Spec](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Product-Spec)
+    - [Description](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#description)
+    - [App Evaluation](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#app-evaluation)
+3.  [Product Spec](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Product-Spec)
     -   [User Stories](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#User-Stories)
-        -   [Required](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Required)
-        -   [Screen Archetypes](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Screen-Archetypes)
-        -   [Navigation](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Navigation)
-3.  [Product Demo](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Product-Demo)
-4.  [UI protoype screens](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#UI-protoype-screens-figma)
+    -   [Screen Archetypes](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Screen-Archetypes)
+    -   [Navigation](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Navigation)
+4.  [Product Demo](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Product-Demo)
+5.  [UI protoype screens](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#UI-protoype-screens-figma)
 
 ## Overview
 
