@@ -8,7 +8,7 @@
         -   [Screen Archetypes](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Screen-Archetypes)
         -   [Navigation](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Navigation)
 3.  [Product Demo](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Product-Demo)
-4.  [UI protoype screens](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#UI-protoype-screens)
+4.  [UI protoype screens](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#UI-protoype-screens-figma)
 
 ## Overview
 
