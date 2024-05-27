@@ -1,30 +1,18 @@
 # fyt.ios
-
-## Table of Contents
-1.  [Overview](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Overview)
-    - [Description](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#description)
-    - [App Evaluation](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#app-evaluation)
-3.  [Product Spec](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Product-Spec)
-    -   [User Stories](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#User-Stories)
-    -   [Screen Archetypes](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Screen-Archetypes)
-    -   [Navigation](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Navigation)
-4.  [Product Demo](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#Product-Demo)
-5.  [UI protoype screens](https://github.com/iamjasonlobo/fyt.ios/blob/main/README.md#UI-protoype-screens-figma)
-
-## Overview
-
 ### Description
-
 fyt is a social fitness app designed to motivate users to workout and stay active. The app has two main views - fyt.social and fyt.me. The social feed allows users to share their workout photos and data, and view posts from other users in the fyt.community. fyt.me provides users with a summary of their health and fitness data for the day, including steps, heart rate, active energy, and sleep.
 
 ### App Evaluation
-
 -   Category: Health & Fitness / Social Networking
 -   Mobile: The app is designed for mobile, specifically iOS devices.
 -   Story: The app aims to motivate users to workout and stay active by allowing them to share their fitness journey with a supportive community.
 -   Market: This app is designed for individuals who are interested in fitness and are looking for a supportive community to help them stay motivated.
 -   Habit: This app can be used daily by individuals looking to track their fitness progress and stay motivated.
 -   Scope: FYT is a social fitness app designed to motivate users to workout and stay active. In future updates, additional features could be added to the app, such as workout challenges and personalized workout recommendations.
+
+## Product Demo
+
+https://user-images.githubusercontent.com/105331420/235343995-ab1ee9e7-3398-41c8-bf57-417f2a1e7d4a.mp4
 
 ## Product Spec
 
@@ -63,11 +51,6 @@ Flow Navigation (Screen to Screen)
 -   Post Screen
     -   Social Feed Screen
 -   Profile Screen
-
-## Product Demo
-
-https://user-images.githubusercontent.com/105331420/235343995-ab1ee9e7-3398-41c8-bf57-417f2a1e7d4a.mp4
-
 
 
 ## UI protoype screens [Figma]
